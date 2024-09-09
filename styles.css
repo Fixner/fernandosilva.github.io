@@ -29,7 +29,6 @@ img {
     height: auto;
 }
 
-
 .navbar {
     display: flex;
     justify-content: flex-start;
@@ -37,36 +36,37 @@ img {
     padding: 10px;
 }
 
-.neon-text {
-    color: #000000; 
-    font-size: 60px;
-    text-shadow: 
-        0 0 5px #000000,    
-        0 0 10px #fff,   
-        0 0 15px #fff,   
-        0 0 20px #fff,  
-        0 0 25px #fff,   
-        0 0 30px #fff,   
-        0 0 35px #fff;  
-}
-
 .navbar-links {
     display: flex;
 }
 
 .navbar-links li {
-    margin-left: 20px; 
+    margin-left: 20px;
 }
 
 .navbar-links a {
     color: #fff;
     font-size: 1em;
+    text-decoration: none; 
 }
 
 .navbar-links a:hover {
-    text-decoration: underline;
+    text-decoration: underline; 
 }
 
+.neon-text {
+    color: #000000; 
+    font-size: 60px;
+    text-shadow: 
+        0 0 5px #fff,   
+        0 0 10px #fff,  
+        0 0 15px #fff,   
+        0 0 20px #fff,   
+        0 0 25px #fff,    
+        0 0 30px #fff,   
+        0 0 35px #fff;   
+    text-align: center;   
+}
 
 .header {
     color: #000000; 
@@ -77,9 +77,9 @@ img {
 
 .img-perfil {
     width: 300px;
-    height: 400px;
+    height: auto;
+    border-radius: 0%;
 }
-
 
 .section {
     background-color: rgba(255, 255, 255, 0.8);
@@ -96,13 +96,13 @@ img {
 }
 
 .img-project {
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
     margin: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
-
 
 .contact-form {
     display: flex;
@@ -137,4 +137,24 @@ img {
     color: #fff;
     text-align: center;
     padding: 10px;
+}
+
+@media (max-width: 820px) {
+    .img-perfil {
+        width: 150px; 
+        height: auto;
+    }
+
+    .proyectos-gallery {
+        display: block;
+    }
+
+    .img-project {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .neon-text {
+        font-size: 40px;
+    }
 }
